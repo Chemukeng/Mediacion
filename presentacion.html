@@ -1091,19 +1091,27 @@
                 </div>
                 <input type="range" class="sim-slider-input" id="slide-conv-med" min="1" max="15" step="0.5" value="5">
               </div>
+
+              <div class="sim-slider-group">
+                <div class="sim-slider-header">
+                  <span>Conversión a Pack Contencioso (Avg. 2.400€)</span>
+                  <span class="sim-slider-val" id="val-conv-cont">2.5%</span>
+                </div>
+                <input type="range" class="sim-slider-input" id="slide-conv-cont" min="0.5" max="10" step="0.5" value="2.5">
+              </div>
             </div>
 
             <!-- Simulator Results -->
             <div class="sim-results-card">
               <div>
                 <p class="sim-result-title">Ingresos Anuales Proyectados</p>
-                <div class="sim-result-big-val" id="res-total-rev">334.400 €</div>
+                <div class="sim-result-big-val" id="res-total-rev">394.400 €</div>
               </div>
 
               <div class="sim-metrics-grid">
                 <div class="sim-metric-item">
                   <span class="sim-metric-label">Payouts de Operaciones (Abogados/Mediadores)</span>
-                  <span class="sim-metric-val" id="res-ops-cost">128.000 €</span>
+                  <span class="sim-metric-val" id="res-ops-cost">288.000 €</span>
                 </div>
                 <div class="sim-metric-item">
                   <span class="sim-metric-label">Margen de Contribución Neto</span>
@@ -1111,7 +1119,7 @@
                 </div>
               </div>
 
-              <div class="sim-margin-badge" id="res-margin-percent">61.7% Margen Operativo</div>
+              <div class="sim-margin-badge" id="res-margin-percent">51.7% Margen Operativo</div>
             </div>
           </div>
           
@@ -1127,10 +1135,10 @@
 
             <div class="biz-item">
               <div class="biz-node"></div>
-              <div class="biz-price-tag">100 €<span>TICKET MEDIO</span></div>
+              <div class="biz-price-tag">80 €<span>TICKET MEDIO</span></div>
               <div>
                 <h4 class="pres-card-title font-serif" style="font-size: 17px; margin-bottom: 4px;">Certificado MASC (Vía de Salida)</h4>
-                <p class="pres-card-desc">Si las partes encallan y no hay acuerdo, emitimos el acta oficial MASC (Medio Alternativo de Solución de Conflictos), que es un <strong>requisito legal obligatorio en España</strong> para demandar por la vía contenciosa.</p>
+                <p class="pres-card-desc">Si las partes encallan y no hay acuerdo, emitimos el acta oficial MASC (Medio Alternativo de Solución de Conflictos) por 80€, que es un <strong>requisito legal obligatorio en España</strong> para demandar por la vía contenciosa.</p>
               </div>
             </div>
 
@@ -1145,10 +1153,19 @@
 
             <div class="biz-item">
               <div class="biz-node"></div>
-              <div class="biz-price-tag">500 € - 900 €<span>TICKET ALTO</span></div>
+              <div class="biz-price-tag">500 € - 800 €<span>TICKET ALTO</span></div>
               <div>
-                <h4 class="pres-card-title font-serif" style="font-size: 17px; margin-bottom: 4px;">Ratificación Legal Completa (Core Business)</h4>
-                <p class="pres-card-desc">El objetivo principal. Ofrecemos tramitación completa con abogado colegiado asignado y procurador que representa a la pareja en sede judicial para conseguir el visado final y la sentencia definitiva de divorcio.</p>
+                <h4 class="pres-card-title font-serif" style="font-size: 17px; margin-bottom: 4px;">Ratificación Legal Completa (Core Business - Mutuo Acuerdo)</h4>
+                <p class="pres-card-desc">El objetivo principal para divorcios consensuados. Ofrecemos tramitación completa con abogado colegiado asignado y procurador que representa a la pareja en sede judicial para conseguir la sentencia definitiva.</p>
+              </div>
+            </div>
+
+            <div class="biz-item">
+              <div class="biz-node"></div>
+              <div class="biz-price-tag">2.400 €<span>TICKET ALTO / CONTENCIOSO</span></div>
+              <div>
+                <h4 class="pres-card-title font-serif" style="font-size: 17px; margin-bottom: 4px;">Pack Contencioso Letrado (Vía de Salida Judicial)</h4>
+                <p class="pres-card-desc">Si no hay acuerdo tras el MASC, les asignamos dos abogados independientes de nuestro panel para presentar la demanda contenciosa de forma optimizada. El expediente ya estructurado en la Bóveda reduce las horas de trabajo del letrado, permitiendo una tarifa plana de 1.200€ por cónyuge (con un margen del 33% para la plataforma).</p>
               </div>
             </div>
           </div>
@@ -1319,34 +1336,37 @@
           <div class="funnel-interactive-layout" style="align-items: flex-start;">
             <div class="closing-letter" style="display: flex; flex-direction: column; gap: 18px; font-size: 15px; line-height: 1.7; color: var(--text-light);">
               <p>
-                Sabemos que, en estos días de cierre de convocatoria, estáis revisando cientos de proyectos y analizando muchísima información. Os agradecemos sinceramente el tiempo y el esfuerzo que habéis dedicado a llegar hasta esta última sección para leernos.
+                Sé que, en estos días de cierre de convocatoria, estáis revisando cientos de proyectos y analizando muchísima información. Os agradezco sinceramente el tiempo y el esfuerzo que habéis dedicado a llegar hasta esta última sección para leernos.
               </p>
               <p>
-                Para nosotros, MediAción no es solo un modelo de negocio o una métrica. Conocemos de primera mano el desgaste personal, la frustración y la fricción que sufre una familia en el sistema tradicional de divorcio. Hemos construido esta plataforma desde cero para ofrecer una alternativa ágil, neutral y justa, protegiendo el bienestar emocional de los menores y de los cónyuges.
+                Para mí, MediAción no es solo un modelo de negocio o una métrica. Como padre, sigo inmerso en un proceso de separación prolongado. Conozco de primera mano el desgaste personal, la frustración y la fricción que sufre una familia en el sistema tradicional. He construido esta herramienta desde cero, aprendiendo y desarrollando la solución que a mí me habría gustado tener para proteger mi tiempo y el de los míos.
               </p>
               <p>
-                No pretendemos que validéis este proyecto solo con un documento. Lo único que os pedimos es la oportunidad de sentarnos con vosotros, mostraros el prototipo funcionando y demostraros la pasión y el trabajo real que hemos puesto en esto.
+                No pretendo que validéis este proyecto solo con un documento. Lo único que os pido es la oportunidad de robaros un momento en persona. Dejadme sentarme con vosotros, mostraros el prototipo funcionando y demostraros la pasión y el trabajo real que he puesto en esto.
               </p>
               <p>
-                Gracias por darnos la oportunidad de ser escuchados.
+                Gracias por darme la oportunidad de ser escuchado.
               </p>
               
               <div class="closing-sign" style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--gold-text); margin-top: 10px;">
-                El Equipo de MediAción
+                Chema Gallardo
               </div>
             </div>
 
             <div style="text-align: center; display: flex; flex-direction: column; gap: 16px;">
               <div class="founder-bezel">
-                <div class="founder-inner" style="display: flex; align-items: center; justify-content: center; background: rgba(181, 148, 78, 0.1);">
-                  <i data-lucide="users" style="width: 48px; height: 48px; color: var(--gold);"></i>
+                <div class="founder-inner">
+                  <img src="capturas/chema.jpg" alt="José María Gallardo Palomino">
                 </div>
               </div>
               <div>
-                <strong style="font-size: 16.5px; color: var(--text-light);">Equipo de MediAción</strong><br>
-                <span style="font-size: 12.5px; color: var(--text-muted);">Mediación S.L.</span>
+                <strong style="font-size: 16.5px; color: var(--text-light);">José María Gallardo Palomino</strong><br>
+                <span style="font-size: 12.5px; color: var(--text-muted);">Founder & CEO, MediAción</span>
                 <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">
-                  Dedicación: Tiempo completo (100% de dedicación)
+                  Dedicación: Tiempo completo (100% acciones)<br>
+                  <a href="https://www.linkedin.com/in/chema-gallardo-49202860" target="_blank" style="color: var(--gold-text); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px;">
+                    <i data-lucide="linkedin" style="width: 14px; height: 14px;"></i> LinkedIn Profile
+                  </a>
                 </p>
               </div>
             </div>
@@ -1565,11 +1585,13 @@
       const inputConvCore = document.getElementById('slide-conv-core');
       const inputConvDiy = document.getElementById('slide-conv-diy');
       const inputConvMed = document.getElementById('slide-conv-med');
+      const inputConvCont = document.getElementById('slide-conv-cont');
 
       const labelCases = document.getElementById('val-cases');
       const labelConvCore = document.getElementById('val-conv-core');
       const labelConvDiy = document.getElementById('val-conv-diy');
       const labelConvMed = document.getElementById('val-conv-med');
+      const labelConvCont = document.getElementById('val-conv-cont');
 
       const resTotalRev = document.getElementById('res-total-rev');
       const resOpsCost = document.getElementById('res-ops-cost');
@@ -1585,22 +1607,26 @@
         const convCore = parseFloat(inputConvCore.value) / 100;
         const convDiy = parseFloat(inputConvDiy.value) / 100;
         const convMed = parseFloat(inputConvMed.value) / 100;
+        const convCont = parseFloat(inputConvCont.value) / 100;
 
         labelCases.textContent = cases.toLocaleString('es-ES');
         labelConvCore.textContent = inputConvCore.value + '%';
         labelConvDiy.textContent = inputConvDiy.value + '%';
         labelConvMed.textContent = inputConvMed.value + '%';
+        labelConvCont.textContent = inputConvCont.value + '%';
 
         // Revenues
         const revCore = cases * convCore * 650;
-        const revDiy = cases * convDiy * 90;
+        const revDiy = cases * convDiy * 80; // adjusted to 80€ for MASC consistency
         const revMed = cases * convMed * 120;
-        const totalRev = revCore + revDiy + revMed;
+        const revCont = cases * convCont * 2400; // 2.400€ total revenue (1.200€ per spouse)
+        const totalRev = revCore + revDiy + revMed + revCont;
 
         // Costs
         const costCore = cases * convCore * 280; // Payout lawyer/procurator
         const costMed = cases * convMed * 80;   // Payout human mediator (2h session)
-        const totalCost = costCore + costMed;
+        const costCont = cases * convCont * 1600; // Payout 2 lawyers (800€ per lawyer)
+        const totalCost = costCore + costMed + costCont;
 
         // Net margin
         const netMargin = totalRev - totalCost;
@@ -1612,7 +1638,7 @@
         resMarginPercent.textContent = marginPercent.toFixed(1) + '% Margen Operativo';
       }
 
-      [inputCases, inputConvCore, inputConvDiy, inputConvMed].forEach(input => {
+      [inputCases, inputConvCore, inputConvDiy, inputConvMed, inputConvCont].forEach(input => {
         input.addEventListener('input', updateROI);
       });
       updateROI(); // Initial calc
