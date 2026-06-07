@@ -1,8 +1,0 @@
-{
-  "name": "screenshots-helper",
-  "version": "1.0.0",
-  "main": "take_screenshots.js",
-  "dependencies": {
-    "playwright": "^1.49.0"
-  }
-}

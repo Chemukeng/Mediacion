@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Next.js app files (ignored for static landing-only repository)
+src/
+public/
+package.json
+package-lock.json
+tsconfig.json
+next.config.ts
+postcss.config.mjs
+eslint.config.mjs
+.next/
+node_modules/
+scratch/
+landing/
+
