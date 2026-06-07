@@ -292,29 +292,51 @@ document.addEventListener("DOMContentLoaded", () => {
       // Simulate loading state
       if (submitBtn) {
         const span = submitBtn.querySelector("span");
-        const icon = submitBtn.querySelector("i");
-        
         if (span) span.innerText = "Registrando...";
-        if (icon) icon.style.opacity = "0.5";
         submitBtn.disabled = true;
       }
+
+      // CONFIGURATION: Set your Formspree Form ID here (e.g. "xqyozabc")
+      // You can get a free Form ID by registering your email at formspree.io
+      const FORMSPREE_ID = ""; 
       
-      setTimeout(() => {
-        // Hide form and show success message
+      if (FORMSPREE_ID) {
+        fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({ email: emailInput.value })
+        })
+        .then(() => {
+          showSuccess();
+        })
+        .catch(() => {
+          // Fallback to simulation if request fails or offline
+          simulateSuccess();
+        });
+      } else {
+        simulateSuccess();
+      }
+      
+      function showSuccess() {
         leadForm.style.display = "none";
         if (successMsg) {
           successMsg.classList.remove("lead-success-hidden");
         }
-        
-        // Re-enable button state
         if (submitBtn) {
           const span = submitBtn.querySelector("span");
-          const icon = submitBtn.querySelector("i");
           if (span) span.innerText = "Unirme a la Lista de Espera";
-          if (icon) icon.style.opacity = "1";
           submitBtn.disabled = false;
         }
-      }, 1200);
+      }
+      
+      function simulateSuccess() {
+        setTimeout(() => {
+          showSuccess();
+        }, 1200);
+      }
     });
   }
 
