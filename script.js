@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // CONFIGURATION: Set your Formspree Form ID here (e.g. "xqyozabc")
       // You can get a free Form ID by registering your email at formspree.io
-      const FORMSPREE_ID = ""; 
+      const FORMSPREE_ID = "mbdeoroo"; 
       
       if (FORMSPREE_ID) {
         fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
