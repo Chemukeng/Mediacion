@@ -1654,7 +1654,7 @@
       const prevBtn = document.getElementById('tour-prev-btn');
       const nextBtn = document.getElementById('tour-next-btn');
 
-      function updateTour() {
+      function updateTour(shouldScrollHeader = true) {
         const step = tourSteps[activeTourIndex];
         
         // Update tab buttons state
@@ -1684,7 +1684,7 @@
 
         // Scroll tabs header to make active visible on mobile
         const activeTabBtn = document.querySelector(`.tour-tab-btn[data-tab="${step.tab}"]`);
-        if (activeTabBtn) {
+        if (activeTabBtn && shouldScrollHeader) {
           activeTabBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
       }
@@ -1719,7 +1719,8 @@
         updateTour();
       });
 
-      updateTour(); // Initial load
+      updateTour(false); // Initial load without page scrolling
+
 
       /* ==========================================
          MODAL COMING SOON / LISTA DE ESPERA
