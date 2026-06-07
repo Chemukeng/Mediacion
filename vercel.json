@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/presentacion.pdf",
+      "destination": "/presentacion.html",
+      "permanent": false
+    }
+  ]
+}
