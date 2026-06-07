@@ -19,6 +19,7 @@ Este documento detalla la infraestructura, los servicios externos conectados y e
 ### Vercel
 * **Función:** Aloja la página web en producción (Live Web).
 * **Integración (CI/CD):** Vercel está conectado directamente a tu cuenta de GitHub y vigila la rama `main`.
+* **Redirecciones:** Configurado en [vercel.json](file:///Users/chema/Desktop/Proyecto%20MedIAdor/vercel.json) en la raíz. Redirige las peticiones de `/presentacion.pdf` a `/presentacion.html` de manera temporal (código 307) para que los enlaces compartidos previamente carguen directamente la versión web interactiva actual sin caché persistente en el navegador del usuario.
 * **Flujo de Trabajo:** Cada vez que se realiza una subida (`git push`) al repositorio de GitHub, Vercel detecta la actualización al instante, compila e implementa los archivos, y los publica en producción en cuestión de segundos **de forma automática**. No requieres entrar en la web de Vercel para publicar cambios.
 
 ---
