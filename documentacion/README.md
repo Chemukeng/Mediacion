@@ -1,8 +1,13 @@
-# Documentación de Servicios Conectados — MediAción
+# Documentación del Proyecto — MediAción
 
-Este documento detalla la infraestructura, los servicios externos conectados y el flujo de automatización del proyecto **MediAción** para que puedas revisarlo en cualquier momento.
+Este directorio contiene la documentación técnica, de negocio y candidaturas del proyecto **MediAción**.
+
+### 📄 Índice de Documentos
+1. [Servicios Conectados y Guía del Proyecto (README.md)](file:///Users/chema/Desktop/Proyecto%20MedIAdor/documentacion/README.md): Detalles de la infraestructura, Vercel, GitHub y Formspree.
+2. [Cuestionario Lanzadera (CUESTIONARIO_LANZADERA.md)](file:///Users/chema/Desktop/Proyecto%20MedIAdor/documentacion/CUESTIONARIO_LANZADERA.md): Copia de las respuestas enviadas para la candidatura en Lanzadera.
 
 ---
+
 
 ## 🏗️ 1. Infraestructura de Código y Control de Versiones
 
