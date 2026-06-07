@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-green: #11372C;
+  --color-brand-green-card: #163B30;
+  --color-brand-gold: #B5944E;
+  --color-brand-gold-hover: #C5A45E;
+  --color-brand-bg: #F5F5F3;
+  --color-brand-card: #EAEAE6;
+  --color-brand-card-light: #FBFBFA;
+  --color-brand-text: #132621;
+  --color-brand-border: #E3E3DE;
+  --color-brand-muted: #6E7C77;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-outfit), sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5F5F3;
+  --foreground: #132621;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar for mobile panels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(253, 253, 253, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(227, 227, 222, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(22, 59, 48, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(181, 148, 78, 0.2);
 }
