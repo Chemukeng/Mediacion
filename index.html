@@ -30,14 +30,14 @@
   <!-- Header / Navigation -->
   <header class="main-header">
     <div class="header-container">
-      <div class="brand-logo">
+      <div class="brand-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
         <span class="logo-light font-serif">Med</span>
         <span class="logo-gold font-serif">iA</span>
         <span class="logo-light font-serif">ción</span>
       </div>
-      <a href="/login" class="btn-header-cta font-serif">
+      <a href="#" class="btn-header-cta font-serif open-modal-btn">
         <span>Acceder a la App</span>
-        <i data-lucide="arrow-up-right" class="icon-sm"></i>
+        <span class="btn-icon-circle"><i data-lucide="arrow-up-right" class="icon-sm"></i></span>
       </a>
     </div>
   </header>
@@ -62,9 +62,9 @@
       <div class="hero-actions">
         <a href="#" class="btn-primary-glow font-serif open-modal-btn">
           <span>Comenzar Mediación Gratis</span>
-          <i data-lucide="arrow-right"></i>
+          <span class="btn-icon-circle"><i data-lucide="arrow-right"></i></span>
         </a>
-        <a href="#mockup-section" class="btn-secondary">
+        <a href="#" class="btn-secondary open-modal-btn">
           <span>Ver la aplicación</span>
           <i data-lucide="smartphone"></i>
         </a>
@@ -98,73 +98,77 @@
 
       <div class="comparison-grid">
         <!-- The Problem -->
-        <div class="comparison-card problem-card">
-          <div class="card-badge bg-red-opacity">
-            <i data-lucide="alert-triangle" class="icon-red"></i>
-            <span>Vía Judicial Contenciosa / Tradicional</span>
+        <div class="bezel-outer problem-bezel">
+          <div class="comparison-card problem-card">
+            <div class="card-badge bg-red-opacity">
+              <i data-lucide="alert-triangle" class="icon-red"></i>
+              <span>Vía Judicial Contenciosa / Tradicional</span>
+            </div>
+            <h3 class="card-title font-serif">Divorcio Tradicional</h3>
+            <ul class="comparison-list">
+              <li>
+                <i data-lucide="x-circle" class="icon-red shrink-0"></i>
+                <div>
+                  <strong>Coste elevado e impredecible:</strong> De media cuesta unos 3.000€ en honorarios de dos abogados, procuradores y costas judiciales.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="x-circle" class="icon-red shrink-0"></i>
+                <div>
+                  <strong>Plazos eternos:</strong> Más de un año de espera para que se asigne sala, se celebre juicio y se dicte sentencia en un juzgado saturado.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="x-circle" class="icon-red shrink-0"></i>
+                <div>
+                  <strong>Falta de control:</strong> Un juez desconocido que no conoce a tu familia decidirá sobre la custodia de tus hijos y la adjudicación de vuestro patrimonio.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="x-circle" class="icon-red shrink-0"></i>
+                <div>
+                  <strong>Desgaste emocional:</strong> El enfoque de confrontación daña de manera irreversible la relación familiar y el bienestar de los menores.
+                </div>
+              </li>
+            </ul>
           </div>
-          <h3 class="card-title font-serif">Divorcio Tradicional</h3>
-          <ul class="comparison-list">
-            <li>
-              <i data-lucide="x-circle" class="icon-red shrink-0"></i>
-              <div>
-                <strong>Coste elevado e impredecible:</strong> De media cuesta unos 3.000€ en honorarios de dos abogados, procuradores y costas judiciales.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="x-circle" class="icon-red shrink-0"></i>
-              <div>
-                <strong>Plazos eternos:</strong> Más de un año de espera para que se asigne sala, se celebre juicio y se dicte sentencia en un juzgado saturado.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="x-circle" class="icon-red shrink-0"></i>
-              <div>
-                <strong>Falta de control:</strong> Un juez desconocido que no conoce a tu familia decidirá sobre la custodia de tus hijos y la adjudicación de vuestro patrimonio.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="x-circle" class="icon-red shrink-0"></i>
-              <div>
-                <strong>Desgaste emocional:</strong> El enfoque de confrontación daña de manera irreversible la relación familiar y el bienestar de los menores.
-              </div>
-            </li>
-          </ul>
         </div>
 
         <!-- The Solution -->
-        <div class="comparison-card solution-card">
-          <div class="card-badge bg-gold-opacity">
-            <i data-lucide="sparkles" class="icon-gold"></i>
-            <span>El Método MedIAdor</span>
+        <div class="bezel-outer solution-bezel">
+          <div class="comparison-card solution-card">
+            <div class="card-badge bg-gold-opacity">
+              <i data-lucide="sparkles" class="icon-gold"></i>
+              <span>El Método MedIAdor</span>
+            </div>
+            <h3 class="card-title font-serif">Mediación Inteligente</h3>
+            <ul class="comparison-list">
+              <li>
+                <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
+                <div>
+                  <strong>Tarifa plana fija y reducida:</strong> Desde 250€ por cónyuge. Abogado, procurador y tasas incluidos, sin sorpresas de última hora.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
+                <div>
+                  <strong>Rapidez absoluta:</strong> Vuestro borrador de convenio redactado y estructurado en pocos días, listo para su firma digital.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
+                <div>
+                  <strong>Control vuestro:</strong> Vosotros decidís de mutuo acuerdo cada punto del convenio, guiados de forma neutral por la IA.
+                </div>
+              </li>
+              <li>
+                <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
+                <div>
+                  <strong>Espacio 100% privado:</strong> Cada uno responde desde su Bóveda Privada de forma independiente y segura. No hay confrontación directa.
+                </div>
+              </li>
+            </ul>
           </div>
-          <h3 class="card-title font-serif">Mediación Inteligente</h3>
-          <ul class="comparison-list">
-            <li>
-              <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
-              <div>
-                <strong>Tarifa plana fija y reducida:</strong> Desde 250€ por cónyuge. Abogado, procurador y tasas incluidos, sin sorpresas de última hora.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
-              <div>
-                <strong>Rapidez absoluta:</strong> Vuestro borrador de convenio redactado y estructurado en pocos días, listo para su firma digital.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
-              <div>
-                <strong>Control vuestro:</strong> Vosotros decidís de mutuo acuerdo cada punto del convenio, guiados de forma neutral por la IA.
-              </div>
-            </li>
-            <li>
-              <i data-lucide="check-circle" class="icon-gold shrink-0"></i>
-              <div>
-                <strong>Espacio 100% privado:</strong> Cada uno responde desde su Bóveda Privada de forma independiente y segura. No hay confrontación directa.
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -305,71 +309,73 @@
   <!-- Section: Interactive Fee Calculator -->
   <section class="calculator-section">
     <div class="section-container">
-      <div class="calculator-card glass-card">
-        <div class="calculator-left">
-          <span class="section-tag text-left">PRESUPUESTOS</span>
-          <h2 class="calculator-title font-serif">Simula tu Tarifa Plana</h2>
-          <p class="calculator-description">
-            En MedIAdor no hay sorpresas de facturación por horas. Calculamos la tarifa según vuestra complejidad familiar y patrimonial. Selecciona tus condiciones y obtén un desglose exacto:
-          </p>
+      <div class="bezel-outer">
+        <div class="calculator-card glass-card">
+          <div class="calculator-left">
+            <span class="section-tag text-left">PRESUPUESTOS</span>
+            <h2 class="calculator-title font-serif">Simula tu Tarifa Plana</h2>
+            <p class="calculator-description">
+              En MedIAdor no hay sorpresas de facturación por horas. Calculamos la tarifa según vuestra complejidad familiar y patrimonial. Selecciona tus condiciones y obtén un desglose exacto:
+            </p>
 
-          <div class="calculator-inputs">
-            <!-- Option 1 -->
-            <label class="calc-checkbox-label">
-              <input type="checkbox" id="calc-children" class="calc-checkbox-input">
-              <span class="calc-checkbox-box">
-                <i data-lucide="check" class="check-icon"></i>
-              </span>
-              <div class="calc-checkbox-text">
-                <strong>Tenemos hijos en común</strong>
-                <span>Menores de edad que requieren medidas de custodia, pensión o alimentos.</span>
-              </div>
-            </label>
+            <div class="calculator-inputs">
+              <!-- Option 1 -->
+              <label class="calc-checkbox-label">
+                <input type="checkbox" id="calc-children" class="calc-checkbox-input">
+                <span class="calc-checkbox-box">
+                  <i data-lucide="check" class="check-icon"></i>
+                </span>
+                <div class="calc-checkbox-text">
+                  <strong>Tenemos hijos en común</strong>
+                  <span>Menores de edad que requieren medidas de custodia, pensión o alimentos.</span>
+                </div>
+              </label>
 
-            <!-- Option 2 -->
-            <label class="calc-checkbox-label">
-              <input type="checkbox" id="calc-properties" class="calc-checkbox-input">
-              <span class="calc-checkbox-box">
-                <i data-lucide="check" class="check-icon"></i>
-              </span>
-              <div class="calc-checkbox-text">
-                <strong>Tenemos una vivienda en propiedad</strong>
-                <span>Vivienda familiar compartida con hipoteca o bienes inmuebles a liquidar.</span>
-              </div>
-            </label>
+              <!-- Option 2 -->
+              <label class="calc-checkbox-label">
+                <input type="checkbox" id="calc-properties" class="calc-checkbox-input">
+                <span class="calc-checkbox-box">
+                  <i data-lucide="check" class="check-icon"></i>
+                </span>
+                <div class="calc-checkbox-text">
+                  <strong>Tenemos una vivienda en propiedad</strong>
+                  <span>Vivienda familiar compartida con hipoteca o bienes inmuebles a liquidar.</span>
+                </div>
+              </label>
+            </div>
           </div>
-        </div>
 
-        <div class="calculator-right">
-          <div class="price-display-box">
-            <span class="price-label">TARIFA PLANA TOTAL</span>
-            <div class="price-value font-sans"><span id="price-total-val">500</span>€</div>
-            
-            <div class="price-split-box">
-              <div class="price-split-item">
-                <span class="split-label">Tu pago (50%)</span>
-                <span class="split-value" id="price-split-val">250€</span>
+          <div class="calculator-right">
+            <div class="price-display-box">
+              <span class="price-label">TARIFA PLANA TOTAL</span>
+              <div class="price-value font-sans"><span id="price-total-val">500</span>€</div>
+              
+              <div class="price-split-box">
+                <div class="price-split-item">
+                  <span class="split-label">Tu pago (50%)</span>
+                  <span class="split-value" id="price-split-val">250€</span>
+                </div>
+                <div class="price-split-item">
+                  <span class="split-label">Su pago (50%)</span>
+                  <span class="split-value" id="price-partner-val">250€</span>
+                </div>
               </div>
-              <div class="price-split-item">
-                <span class="split-label">Su pago (50%)</span>
-                <span class="split-value" id="price-partner-val">250€</span>
-              </div>
-            </div>
 
-            <div class="price-includes">
-              <div class="includes-title">El paquete incluye:</div>
-              <ul class="includes-list">
-                <li><i data-lucide="check" class="icon-gold"></i> Redacción de Convenio Jurídico Profesional</li>
-                <li><i data-lucide="check" class="icon-gold"></i> Abogado Colegiado y Procurador</li>
-                <li><i data-lucide="check" class="icon-gold"></i> Mediación digital guiada con IA</li>
-                <li><i data-lucide="check" class="icon-gold"></i> Presentación judicial y tasas</li>
-              </ul>
+              <div class="price-includes">
+                <div class="includes-title">El paquete incluye:</div>
+                <ul class="includes-list">
+                  <li><i data-lucide="check" class="icon-gold"></i> Redacción de Convenio Jurídico Profesional</li>
+                  <li><i data-lucide="check" class="icon-gold"></i> Abogado Colegiado y Procurador</li>
+                  <li><i data-lucide="check" class="icon-gold"></i> Mediación digital guiada con IA</li>
+                  <li><i data-lucide="check" class="icon-gold"></i> Presentación judicial y tasas</li>
+                </ul>
+              </div>
+              
+              <a href="#" class="btn-primary-glow font-serif w-full open-modal-btn" style="margin-top: 56px;">
+                <span>Empezar con esta Tarifa</span>
+                <span class="btn-icon-circle"><i data-lucide="arrow-right"></i></span>
+              </a>
             </div>
-            
-            <a href="#" class="btn-primary-glow font-serif w-full text-center justify-center mt-6 open-modal-btn">
-              <span>Empezar con esta Tarifa</span>
-              <i data-lucide="arrow-right"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -431,7 +437,7 @@
         </p>
         <a href="#" class="btn-primary-glow font-serif open-modal-btn">
           <span>Iniciar Proceso de Mediación</span>
-          <i data-lucide="arrow-right"></i>
+          <span class="btn-icon-circle"><i data-lucide="arrow-right"></i></span>
         </a>
       </div>
     </div>
@@ -454,10 +460,10 @@
       </div>
       <div class="footer-right">
         <ul class="footer-links">
-          <li><a href="#">Aviso Legal</a></li>
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Condiciones de Servicio</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="condiciones-servicio.html">Condiciones de Servicio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -482,9 +488,9 @@
             <i data-lucide="mail" class="input-icon"></i>
             <input type="email" id="lead-email" placeholder="ejemplo@correo.com" required>
           </div>
-          <button type="submit" id="lead-submit-btn" class="btn-primary-glow font-serif w-full justify-center">
+          <button type="submit" id="lead-submit-btn" class="btn-primary-glow font-serif w-full">
             <span>Unirme a la Lista de Espera</span>
-            <i data-lucide="send"></i>
+            <span class="btn-icon-circle"><i data-lucide="send"></i></span>
           </button>
         </form>
         <div id="lead-success-msg" class="lead-success-hidden">
