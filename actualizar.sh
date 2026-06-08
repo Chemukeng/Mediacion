@@ -1,6 +1,13 @@
 #!/bin/bash
 # Script para subir cambios a GitHub automáticamente
 
+echo "🏗️  Compilando y exportando el prototipo..."
+npm run build-prototype
+
+echo "🔄 Copiando prototipo para previsualización local..."
+rm -rf landing/prototipo
+cp -R prototipo landing/prototipo
+
 echo "🔄 Detectando cambios y preparando subida a GitHub..."
 
 # Stage all changes
