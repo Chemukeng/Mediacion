@@ -54,3 +54,17 @@ node_modules/
 scratch/
 landing/
 
+# Agent and local files
+.agents/
+AGENTS.md
+CLAUDE.md
+skills-lock.json
+presentacion.pdf
+
+# Reference designs and documentation
+PNG/
+capturas para presentacion/
+design_reference/
+design_reference_new/
+docs/
+documentacion/
