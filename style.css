@@ -1217,7 +1217,10 @@ section {
   /* Mobile Header Optimizations */
   .main-header {
     top: 12px;
-    width: calc(100% - 24px) !important;
+    left: 12px !important;
+    right: 12px !important;
+    transform: none !important;
+    width: auto !important;
     height: 52px !important;
   }
   
