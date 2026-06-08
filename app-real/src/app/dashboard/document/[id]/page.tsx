@@ -55,7 +55,7 @@ export default function DocumentPage({ params }: { params: { id: string } }) {
               I. Que contrajeron matrimonio en [Fecha de Matrimonio], constando inscrito en el Registro Civil de [Ciudad].
             </p>
             <p>
-              II. Que mediante la plataforma <strong>MediadoresIA</strong>, y de forma libre y voluntaria, han alcanzado un consenso total sobre las medidas que han de regular los efectos derivados de la crisis matrimonial, materializadas en el presente Convenio Regulador.
+              II. Que mediante la plataforma <strong>MediAción</strong>, y de forma libre y voluntaria, han alcanzado un consenso total sobre las medidas que han de regular los efectos derivados de la crisis matrimonial, materializadas en el presente Convenio Regulador.
             </p>
 
             <div className="my-12 flex justify-center">

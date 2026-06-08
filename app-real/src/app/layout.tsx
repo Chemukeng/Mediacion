@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MediadoresIA",
+  title: "MediAción",
   description: "Mediación legal guiada para parejas en proceso de divorcio",
 };
 

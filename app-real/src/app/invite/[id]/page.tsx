@@ -34,7 +34,7 @@ export default async function InvitePage({ params }: { params: Promise<{ id: str
     <div className="flex min-h-screen items-center justify-center bg-slate-50 p-4 font-sans">
       <Card className="w-full max-w-md shadow-xl border-slate-100">
         <CardHeader className="text-center pb-2">
-          <CardTitle className="text-2xl font-bold text-slate-900">Invitación a MediadoresIA</CardTitle>
+          <CardTitle className="text-2xl font-bold text-slate-900">Invitación a MediAción</CardTitle>
           <CardDescription className="text-slate-500 mt-2">
             Has sido invitado a participar en un expediente de separación amistosa.
           </CardDescription>

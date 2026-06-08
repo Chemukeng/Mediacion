@@ -1,4 +1,4 @@
-/* script.js - MedIAdor Landing Page Lógica e Interactividad */
+/* script.js - MediAción Landing Page Lógica e Interactividad */
 
 document.addEventListener("DOMContentLoaded", () => {
 

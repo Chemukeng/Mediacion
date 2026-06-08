@@ -19,7 +19,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-slate-50 p-4 font-sans">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl border border-slate-100">
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">MediadoresIA</h1>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">MediAción</h1>
           <p className="text-slate-500">Mediación legal guiada y serena</p>
         </div>
         
