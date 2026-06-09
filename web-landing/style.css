@@ -288,8 +288,8 @@ section {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 32px);
-  max-width: 950px;
+  width: calc(100% - 48px);
+  max-width: 1152px;
   height: 60px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
@@ -403,6 +403,7 @@ section {
   align-items: center;
   gap: 8px;
   margin-bottom: 28px;
+  max-width: 100%;
 }
 
 .hero-title {
@@ -1218,11 +1219,24 @@ section {
     gap: 16px;
   }
 
+  .section-container {
+    padding: 0 16px !important;
+  }
+
+  .hero-badge {
+    font-size: 8.5px !important;
+    padding: 6px 12px !important;
+    letter-spacing: 0.1em !important;
+    white-space: normal !important;
+    display: inline-flex !important;
+    text-align: left;
+  }
+
   /* Mobile Header Optimizations */
   .main-header {
     top: 12px;
-    left: 12px !important;
-    right: 12px !important;
+    left: 16px !important;
+    right: 16px !important;
     transform: none !important;
     width: auto !important;
     height: 52px !important;

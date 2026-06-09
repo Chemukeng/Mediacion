@@ -716,23 +716,38 @@
       }
 
       .pres-sidebar {
-        position: relative;
-        top: 0;
+        position: sticky;
+        top: 76px;
         height: auto;
         border-right: none;
         border-bottom: 1px solid var(--border-glass);
-        padding-bottom: 24px;
-        margin-bottom: 40px;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        background: rgba(251, 251, 250, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 900;
       }
 
       .pres-index {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding: 4px 16px;
+        margin: 0 -16px;
+        gap: 20px !important;
+      }
+
+      .pres-index::-webkit-scrollbar {
+        display: none;
       }
 
       .pres-index-item {
-        font-size: 12px;
+        font-size: 12.5px;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
       }
 
       .pres-sidebar-footer {
