@@ -709,7 +709,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* Media query overrides */
     @media (max-width: 950px) {
       .pres-layout {
         grid-template-columns: 1fr;
@@ -751,6 +750,75 @@
 
       .showcase-phone-wrapper {
         order: -1; /* Place phone frame on top on mobile */
+      }
+
+      /* Mobile improvements for Pitch Deck & Simulator */
+      .cover-title {
+        font-size: 44px !important;
+        margin-bottom: 16px;
+      }
+
+      .cover-subtitle {
+        font-size: 16px !important;
+        margin-bottom: 24px;
+      }
+
+      .pres-slide {
+        min-height: auto;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+      }
+
+      .pres-card {
+        padding: 20px !important;
+        gap: 12px !important;
+      }
+
+      .sim-controls-card {
+        padding: 20px !important;
+        gap: 16px !important;
+      }
+
+      .sim-results-card {
+        padding: 24px !important;
+      }
+
+      .sim-result-big-val {
+        font-size: 32px !important;
+        margin-bottom: 16px !important;
+      }
+
+      .sim-metric-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .sim-metric-val {
+        font-size: 15px;
+      }
+
+      .biz-item {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .biz-price-tag {
+        flex-direction: row !important;
+        gap: 8px !important;
+        align-items: center !important;
+      }
+
+      .biz-timeline::before {
+        left: 4px;
+      }
+
+      .biz-node {
+        left: -20px;
+      }
+
+      .funnel-stage-btn {
+        padding: 14px 18px !important;
       }
     }
 
@@ -830,9 +898,9 @@
         <span class="logo-light font-serif">ción</span>
       </div>
       <div class="header-actions">
-        <a href="index.html" class="btn-header-cta font-serif" style="background: transparent; border-color: transparent;">
-          <i data-lucide="arrow-left" class="icon-sm"></i>
-          <span>Volver<span class="hide-mobile"> a Inicio</span></span>
+        <a href="index.html" class="btn-header-cta font-serif" style="background: transparent; border-color: transparent; padding-left: 8px !important; padding-right: 8px !important;">
+          <i data-lucide="arrow-left" class="icon-sm" style="margin: 0 !important;"></i>
+          <span class="hide-mobile">Volver a Inicio</span>
         </a>
         <a href="#" class="btn-header-cta font-serif open-modal-btn">
           <span>Acceder<span class="hide-mobile"> a la App</span></span>

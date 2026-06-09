@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firma Email · MediAción</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: #FBFBFA;
+      background-image: radial-gradient(circle at 50% 0%, rgba(181,148,78,0.10) 0%, transparent 60%);
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 60px 20px; gap: 28px;
+    }
+    .page-label { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #B5944E; text-transform: uppercase; }
+    .preview-card {
+      background: #FFFFFF; border: 1px solid rgba(19,38,32,0.08); border-radius: 28px;
+      padding: 40px 48px; width: 100%; max-width: 620px;
+      box-shadow: 0 20px 40px -10px rgba(19,38,32,0.08), inset 0 1px 1px rgba(255,255,255,0.8);
+    }
+    .preview-inner-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: rgba(94,119,110,0.6);
+      text-transform: uppercase; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid rgba(19,38,32,0.06);
+    }
+    .actions { display: flex; gap: 12px; width: 100%; max-width: 620px; }
+    .btn {
+      flex: 1; padding: 14px 20px; border-radius: 100px; font-size: 13.5px;
+      font-weight: 600; cursor: pointer; border: none; font-family: 'Outfit', sans-serif;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold { background: #B5944E; color: #13382C; box-shadow: 0 12px 40px -5px rgba(181,148,78,0.35); }
+    .btn-gold:hover { background: #9F7E3B; transform: translateY(-2px); }
+    .btn-outline { background: rgba(19,38,32,0.03); color: #132621; border: 1.5px solid rgba(19,38,32,0.12); }
+    .btn-outline:hover { border-color: #B5944E; background: rgba(181,148,78,0.06); }
+    .nota { font-size: 12px; color: #5E776E; text-align: center; max-width: 560px; line-height: 1.7; }
+    #firma-email { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+    .firma-wrapper { padding-top: 20px; border-top: 2px solid #B5944E; max-width: 500px; }
+    .firma-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .firma-foto {
+      width: 58px; height: 58px; border-radius: 14px; object-fit: cover;
+      border: 2px solid rgba(181,148,78,0.35); flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(19,38,32,0.12);
+    }
+    .firma-nombre { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: #132621; margin: 0 0 3px; line-height: 1.2; }
+    .firma-cargo-line { font-size: 12px; font-weight: 600; color: #5E776E; margin: 0; }
+    .firma-empresa { color: #8C6F35; font-weight: 700; }
+    .firma-sep { height: 1px; background: linear-gradient(to right, rgba(181,148,78,0.3), rgba(19,38,32,0.06), transparent); margin: 14px 0; }
+    .firma-contacto { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+    .firma-link-row { display: flex; align-items: center; gap: 9px; text-decoration: none; font-size: 13px; color: #132621; }
+    .firma-link-row:hover { color: #8C6F35; }
+    .firma-link-dot { width: 5px; height: 5px; border-radius: 50%; background: #B5944E; flex-shrink: 0; }
+    .firma-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(181,148,78,0.08); border: 1px solid rgba(181,148,78,0.22);
+      border-radius: 100px; padding: 6px 14px 6px 10px;
+      font-size: 11px; color: #8C6F35; font-weight: 600; margin-bottom: 18px;
+    }
+    .firma-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #B5944E; flex-shrink: 0; }
+    .firma-legal-block { border-top: 1px solid rgba(19,38,32,0.07); padding-top: 14px; margin-top: 4px; }
+    .firma-legal-title { font-size: 9.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #8C6F35; margin-bottom: 8px; }
+    .firma-legal-text { font-size: 10px; color: #5E776E; line-height: 1.6; margin-bottom: 7px; }
+    .firma-legal-text:last-child { margin-bottom: 0; }
+    .firma-legal-text strong { color: #132621; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <span class="page-label">Vista previa · Firma corporativa MediAción</span>
+  <div class="preview-card">
+    <p class="preview-inner-label">Firma de correo — Chema Gallardo · MediAción S.L.</p>
+    <div id="firma-email">
+      <div class="firma-wrapper">
+        <div class="firma-header">
+          <img class="firma-foto" src="data:image/jpeg;base64,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" alt="Chema Gallardo">
+          <div>
+            <p class="firma-nombre">Chema Gallardo</p>
+            <p class="firma-cargo-line">Fundador <span style="color:#B5944E;margin:0 5px;">·</span> <span class="firma-empresa">MediAción S.L.</span></p>
+          </div>
+        </div>
+        <div class="firma-sep"></div>
+        <div class="firma-contacto">
+          <a class="firma-link-row" href="mailto:contacto@mediacion.app"><span class="firma-link-dot"></span>contacto@mediacion.app</a>
+          <a class="firma-link-row" href="https://mediacion.app" target="_blank"><span class="firma-link-dot"></span>mediacion.app</a>
+        </div>
+        <div class="firma-badge"><span class="firma-badge-dot"></span>Mediación profesional certificada · Confidencial y segura</div>
+        <div class="firma-legal-block">
+          <p class="firma-legal-title">⚖ Aviso legal y confidencialidad</p>
+          <p class="firma-legal-text">Este mensaje y sus adjuntos son <strong>confidenciales y están dirigidos exclusivamente a su destinatario</strong>. Si ha recibido este correo por error, le rogamos que lo comunique al remitente y proceda a su eliminación inmediata. Queda prohibida cualquier divulgación o uso no autorizado.</p>
+          <p class="firma-legal-text"><strong>Protección de datos · RGPD (Reglamento UE 2016/679) y LOPDGDD (LO 3/2018):</strong> Sus datos son tratados por <strong>MediAción S.L.</strong>, CIF <strong>B-83921754</strong>, domicilio social en <strong>Calle Gran Vía, 28, 3.º Dcha., 28013 Madrid</strong>, para gestionar la relación profesional establecida. Derechos: <a href="mailto:contacto@mediacion.app" style="color:#8C6F35;">contacto@mediacion.app</a>. Política de privacidad: <a href="https://mediacion.app/privacidad" style="color:#8C6F35;">mediacion.app/privacidad</a>.</p>
+          <p class="firma-legal-text"><strong>Confidencialidad de la mediación · Ley 5/2012:</strong> Las comunicaciones de un proceso de mediación están protegidas por el deber de confidencialidad del art. 9 de la Ley 5/2012 de mediación en asuntos civiles y mercantiles.</p>
+          <p class="firma-legal-text"><strong>Comunicaciones comerciales · LSSI-CE (Ley 34/2002, art. 21):</strong> Este correo no tiene carácter publicitario. Para darse de baja escriba a <a href="mailto:contacto@mediacion.app" style="color:#8C6F35;">contacto@mediacion.app</a> con el asunto «baja».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn btn-gold" onclick="copiarHTML()">📋 Copiar código HTML para Zoho</button>
+    <button class="btn btn-outline" onclick="copiarTexto()">📄 Texto plano</button>
+  </div>
+  <p class="nota">Zoho Mail → ⚙️ Ajustes → <strong>Firma</strong> → Crear firma → icono <strong>&lt;/&gt;</strong> → pega → Guardar.</p>
+
+  <script>
+    const IMG_B64 = "data:image/jpeg;base64,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";
+    async function copiarHTML() {
+      const html = `<table cellpadding="0" cellspacing="0" border="0" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;max-width:500px;border-top:2px solid #B5944E;padding-top:20px;"><tr><td><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;"><tr><td style="padding-right:16px;vertical-align:middle;"><img src="${IMG_B64}" alt="Chema Gallardo" width="58" height="58" style="width:58px;height:58px;border-radius:14px;object-fit:cover;border:2px solid rgba(181,148,78,0.35);display:block;"></td><td style="vertical-align:middle;"><p style="font-family:Georgia,serif;font-size:17px;font-weight:700;color:#132621;margin:0 0 3px;">Chema Gallardo</p><p style="font-size:12px;font-weight:600;color:#5E776E;margin:0;">Fundador <span style="color:#B5944E;margin:0 4px;">·</span> <span style="color:#8C6F35;font-weight:700;">MediAción S.L.</span></p></td></tr></table><div style="height:1px;background:linear-gradient(to right,rgba(181,148,78,0.3),rgba(19,38,32,0.06),transparent);margin:12px 0;"></div><table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;"><tr><td style="padding-bottom:6px;"><span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#B5944E;vertical-align:middle;margin-right:8px;"></span><a href="mailto:contacto@mediacion.app" style="color:#132621;text-decoration:none;font-size:13px;">contacto@mediacion.app</a></td></tr><tr><td><span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#B5944E;vertical-align:middle;margin-right:8px;"></span><a href="https://mediacion.app" style="color:#132621;text-decoration:none;font-size:13px;">mediacion.app</a></td></tr></table><div style="display:inline-block;background:rgba(181,148,78,0.08);border:1px solid rgba(181,148,78,0.22);border-radius:100px;padding:5px 14px 5px 10px;margin-bottom:16px;"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#B5944E;vertical-align:middle;margin-right:7px;"></span><span style="font-size:11px;color:#8C6F35;font-weight:600;">Mediación profesional certificada · Confidencial y segura</span></div><div style="border-top:1px solid rgba(19,38,32,0.07);padding-top:12px;"><p style="font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#8C6F35;margin:0 0 7px;">⚖ Aviso legal y confidencialidad</p><p style="font-size:10px;color:#5E776E;line-height:1.6;margin:0 0 6px;">Este mensaje y sus adjuntos son <strong style="color:#132621;">confidenciales y dirigidos exclusivamente a su destinatario</strong>. Si lo recibió por error, comuníquelo al remitente y elimínelo. Queda prohibida su divulgación o uso no autorizado.</p><p style="font-size:10px;color:#5E776E;line-height:1.6;margin:0 0 6px;"><strong style="color:#132621;">Protección de datos · RGPD (UE 2016/679) y LOPDGDD (LO 3/2018):</strong> Datos tratados por <strong style="color:#132621;">MediAción S.L.</strong>, CIF <strong style="color:#132621;">B-83921754</strong>, domicilio en <strong style="color:#132621;">Calle Gran Vía, 28, 3.º Dcha., 28013 Madrid</strong>. Derechos: <a href="mailto:contacto@mediacion.app" style="color:#8C6F35;">contacto@mediacion.app</a>. Privacidad: <a href="https://mediacion.app/privacidad" style="color:#8C6F35;">mediacion.app/privacidad</a>.</p><p style="font-size:10px;color:#5E776E;line-height:1.6;margin:0 0 6px;"><strong style="color:#132621;">Confidencialidad · Ley 5/2012:</strong> Las comunicaciones de mediación están protegidas por el art. 9 de la Ley 5/2012 de mediación en asuntos civiles y mercantiles.</p><p style="font-size:10px;color:#5E776E;line-height:1.6;margin:0;"><strong style="color:#132621;">LSSI-CE (Ley 34/2002, art. 21):</strong> Correo no publicitario. Baja: <a href="mailto:contacto@mediacion.app" style="color:#8C6F35;">contacto@mediacion.app</a> con asunto «baja».</p></div></td></tr></table>`;
+      try { await navigator.clipboard.writeText(html); }
+      catch(e) { const ta=document.createElement('textarea');ta.value=html;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta); }
+      const btn=document.querySelector('.btn-gold');
+      btn.textContent='✅ ¡Copiado! Pégalo en Zoho Mail';
+      setTimeout(()=>btn.textContent='📋 Copiar código HTML para Zoho',3500);
+    }
+    async function copiarTexto() {
+      const t=`Chema Gallardo\nFundador · MediAción S.L.\n\n✉ contacto@mediacion.app\n🌐 mediacion.app\n\nMediación profesional certificada · Confidencial y segura\n\n---\nAVISO LEGAL: Mensaje confidencial. RGPD/LOPDGDD: datos tratados por MediAción S.L., CIF B-83921754, Calle Gran Vía, 28, 3.º Dcha., 28013 Madrid. Derechos: contacto@mediacion.app. Ley 5/2012: confidencialidad de mediación. LSSI-CE art.21: no publicitario.`;
+      try { await navigator.clipboard.writeText(t); }
+      catch(e) { const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta); }
+      const btn=document.querySelector('.btn-outline');
+      btn.textContent='✅ ¡Copiado!';
+      setTimeout(()=>btn.textContent='📄 Texto plano',3000);
+    }
+  </script>
+</body>
+</html>
