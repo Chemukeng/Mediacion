@@ -328,6 +328,12 @@ section {
   color: var(--gold-text);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .btn-header-cta {
   border: 1px solid var(--border-glass);
   background: var(--bg-glass);
