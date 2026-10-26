@@ -256,18 +256,17 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           body: JSON.stringify({ email: emailInput.value })
         })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) throw new Error("No confirmado");
           showSuccess();
         })
-        .catch(() => {
-          // Fallback to simulation if request fails or offline
-          simulateSuccess();
-        });
+        .catch(showError);
       } else {
-        simulateSuccess();
+        showError();
       }
       
       function showSuccess() {
+        document.getElementById("lead-error")?.remove();
         // Conversión: alta en la lista de espera (Vercel Analytics)
         if (window.va) window.va("event", { name: "lista_espera" });
         leadForm.style.display = "none";
@@ -281,11 +280,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       
-      function simulateSuccess() {
-        setTimeout(() => {
-          showSuccess();
-        }, 1200);
+      function showError() {
+        let error = document.getElementById("lead-error");
+        if (!error) { error = document.createElement("p"); error.id = "lead-error"; error.setAttribute("role", "alert"); leadForm.appendChild(error); }
+        error.textContent = "No hemos podido confirmar el registro. Tu correo sigue aquí; puedes reintentarlo.";
+        if (submitBtn) { submitBtn.disabled = false; const span=submitBtn.querySelector("span"); if(span)span.innerText="Reintentar el registro"; }
       }
+
     });
   }
 

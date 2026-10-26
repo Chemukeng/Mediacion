@@ -377,32 +377,7 @@
         if (e.key === "Escape" && modal && modal.classList.contains("active")) closeModal();
       });
 
-      // Lead Form Submit
-      if (leadForm) {
-        leadForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          const submitBtn = document.getElementById("lead-submit-btn");
-          const emailInput = document.getElementById("lead-email");
-          if (!emailInput || !emailInput.value) return;
-          
-          if (submitBtn) {
-            const span = submitBtn.querySelector("span");
-            if (span) span.innerText = "Registrando...";
-            submitBtn.disabled = true;
-          }
-          
-          setTimeout(() => {
-            leadForm.style.display = "none";
-            if (leadSuccessMsg) leadSuccessMsg.classList.remove("lead-success-hidden");
-            if (submitBtn) {
-              const span = submitBtn.querySelector("span");
-              if (span) span.innerText = "Unirme a la Lista de Espera";
-              submitBtn.disabled = false;
-            }
-          }, 1200);
-        });
-      }
-
+      // La lista de espera usa el controlador común, sin éxito simulado.
       // Contact Form Submit
       if (contactForm) {
         contactForm.addEventListener("submit", (e) => {
@@ -434,18 +409,16 @@
               },
               body: JSON.stringify(formData)
             })
-            .then(() => {
+            .then((response) => {
+              if (!response.ok) throw new Error("No confirmado");
               showSuccess();
-            })
-            .catch(() => {
-              // Fallback to simulation if request fails or offline
-              simulateSuccess();
-            });
+            }).catch(showError);
           } else {
-            simulateSuccess();
+            showError();
           }
           
           function showSuccess() {
+            document.getElementById("contact-error")?.remove();
             contactFormContent.classList.add("hidden");
             setTimeout(() => {
               contactFormContent.style.display = "none";
@@ -459,11 +432,13 @@
             }
           }
           
-          function simulateSuccess() {
-            setTimeout(() => {
-              showSuccess();
-            }, 1000);
+          function showError() {
+            let error=document.getElementById("contact-error");
+            if(!error){error=document.createElement("p");error.id="contact-error";error.setAttribute("role","alert");contactForm.appendChild(error);}
+            error.textContent="No hemos podido confirmar el envío. Tus datos siguen aquí; puedes reintentarlo.";
+            if(submitBtn){submitBtn.disabled=false;const span=submitBtn.querySelector("span");if(span)span.innerText="Reintentar envío";}
           }
+
         });
       }
     });
@@ -471,5 +446,6 @@
   <!-- Vercel Web Analytics (sin cookies, respetuoso con RGPD) -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
+<script src="script.js?v=20261026"></script>
 </body>
 </html>
