@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function showSlide(index) {
     if (index < 0) index = slideCount - 1;
     if (index >= slideCount) index = 0;
-    
+
     currentSlide = index;
 
     // Apply fade transition
     mockupImg.style.opacity = 0;
-    
+
     setTimeout(() => {
       mockupImg.src = slides[currentSlide].img;
       mockupImg.style.opacity = 1;
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modal) {
       modal.classList.remove("active");
       document.body.style.overflow = ""; // Re-enable scroll
-      
+
       // Reset form state after fade out animation
       setTimeout(() => {
         if (leadForm) {
@@ -230,12 +230,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (leadForm) {
     leadForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      
+
       const submitBtn = document.getElementById("lead-submit-btn");
       const emailInput = document.getElementById("lead-email");
-      
+
       if (!emailInput || !emailInput.value) return;
-      
+
       // Simulate loading state
       if (submitBtn) {
         const span = submitBtn.querySelector("span");
@@ -245,8 +245,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // CONFIGURATION: Set your Formspree Form ID here (e.g. "xqyozabc")
       // You can get a free Form ID by registering your email at formspree.io
-      const FORMSPREE_ID = "mbdeoroo"; 
-      
+      const FORMSPREE_ID = ""; // Formularios públicos en pausa (ADR-038).
+
       if (FORMSPREE_ID) {
         fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
           method: "POST",
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         showError();
       }
-      
+
       function showSuccess() {
         document.getElementById("lead-error")?.remove();
         // Conversión: alta en la lista de espera (Vercel Analytics)
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
           submitBtn.disabled = false;
         }
       }
-      
+
       function showError() {
         let error = document.getElementById("lead-error");
         if (!error) { error = document.createElement("p"); error.id = "lead-error"; error.setAttribute("role", "alert"); leadForm.appendChild(error); }
