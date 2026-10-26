@@ -112,6 +112,15 @@ section {
   margin-bottom: 60px;
 }
 
+/* Utilidad que el HTML usa en todos los section-header pero faltaba definir */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .section-tag {
   display: inline-block;
   font-size: 11px;
@@ -1485,3 +1494,290 @@ section {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================
+   LAS TRES PUERTAS (plan de marketing, doc 02 §2)
+   ========================================== */
+.doors-section {
+  padding: 100px 0 60px;
+  position: relative;
+}
+
+.doors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.door-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 30px;
+  border-radius: 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.door-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.door-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--gold-opacity);
+  border: 1px solid var(--gold-border);
+  margin-bottom: 20px;
+}
+
+.door-title {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  color: var(--text-light);
+}
+
+.door-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.door-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--gold-text);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.door-cta:hover {
+  color: var(--gold-hover);
+}
+
+.doors-vg-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.doors-vg-note a {
+  color: var(--gold-text);
+  text-decoration: none;
+}
+
+.doors-vg-note a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   PRECIO: escalera de anclaje + nota de lanzamiento
+   ========================================== */
+.price-anchor-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.price-anchor-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.price-anchor-list strong {
+  color: var(--text-light);
+}
+
+.icon-muted {
+  color: var(--text-muted);
+  width: 20px;
+  height: 20px;
+}
+
+.price-launch-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--gold-opacity);
+  border: 1px solid var(--gold-border);
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: left;
+}
+
+/* ==========================================
+   FOOTER: recurso 016
+   ========================================== */
+.footer-016 {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-016 a {
+  color: var(--gold-text);
+  text-decoration: none;
+}
+
+/* Responsive: puertas en columna en pantallas medianas/móvil */
+@media (max-width: 968px) {
+  .doors-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .doors-section {
+    padding: 60px 0 40px;
+  }
+}
+
+/* ==========================================
+   GUÍAS (piezas SEO, Fase 0 del plan de marketing)
+   ========================================== */
+.guide-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+.guide-breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.guide-breadcrumb a {
+  color: var(--gold-text);
+  text-decoration: none;
+}
+
+.guide-title {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.guide-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.guide-article h2 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  margin: 44px 0 16px;
+  color: var(--text-light);
+}
+
+.guide-article h3 {
+  font-size: 19px;
+  margin: 30px 0 10px;
+}
+
+.guide-article p, .guide-article li {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.guide-article ul, .guide-article ol {
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+
+.guide-article li { margin-bottom: 8px; }
+
+.guide-article strong { color: var(--text-light); }
+
+.guide-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 28px;
+  font-size: 0.95rem;
+}
+
+.guide-article th, .guide-article td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-glass);
+  color: var(--text-muted);
+}
+
+.guide-article th { color: var(--text-light); font-weight: 600; }
+
+.guide-cta {
+  background: var(--gold-opacity);
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  padding: 28px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.guide-cta p { color: var(--text-light); margin-bottom: 18px; }
+
+.guide-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--gold-border);
+  padding-left: 14px;
+  margin: 32px 0;
+}
+
+.guide-016 {
+  background: var(--red-opacity);
+  border: 1px solid var(--red-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 32px 0;
+}
+
+.guides-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.guide-card {
+  padding: 28px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.guide-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-gold); }
+
+.guide-card h2 { font-family: var(--font-serif); font-size: 21px; color: var(--text-light); margin-bottom: 8px; }
+
+.guide-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }

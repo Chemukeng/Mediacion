@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mediacion.app/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mediacion.app/guias</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mediacion.app/guias/cuanto-cuesta-un-divorcio</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mediacion.app/guias/divorcio-de-mutuo-acuerdo-paso-a-paso</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mediacion.app/guias/que-es-un-masc</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mediacion.app/contacto</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

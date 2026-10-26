@@ -112,75 +112,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initialize Showcase
-  showSlide(0);
-  startAutoplay();
-
-
-  /* ==========================================
-     2. CALCULADORA DE TARIFAS INTERACTIVA
-     ========================================== */
-  const chkChildren = document.getElementById("calc-children");
-  const chkProperties = document.getElementById("calc-properties");
-  const totalValElement = document.getElementById("price-total-val");
-  const splitValElement = document.getElementById("price-split-val");
-  const partnerValElement = document.getElementById("price-partner-val");
-
-  let currentPrice = 500;
-
-  function animateNumber(element, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const val = Math.floor(progress * (end - start) + start);
-      element.innerText = val;
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
-
-  function updatePrice() {
-    const hasChildren = chkChildren.checked;
-    const hasProperties = chkProperties.checked;
-    
-    // Dynamic Pricing Logic:
-    // If has kids or properties, price is 800€. Otherwise, it is 500€.
-    const targetPrice = (hasChildren || hasProperties) ? 800 : 500;
-    
-    if (targetPrice !== currentPrice) {
-      // Animate the total value
-      animateNumber(totalValElement, currentPrice, targetPrice, 350);
-      
-      // Animate split value
-      const targetHalf = targetPrice / 2;
-      const currentHalf = currentPrice / 2;
-      
-      setTimeout(() => {
-        splitValElement.innerText = `${targetHalf}€`;
-        partnerValElement.innerText = `${targetHalf}€`;
-      }, 100);
-      
-      currentPrice = targetPrice;
-    }
-  }
-
-  if (chkChildren && chkProperties) {
-    chkChildren.addEventListener("change", updatePrice);
-    chkProperties.addEventListener("change", updatePrice);
+  // Initialize Showcase (solo si la página tiene el carrusel; las guías no lo tienen)
+  if (mockupImg) {
+    showSlide(0);
+    startAutoplay();
   }
 
 
   /* ==========================================
-     3. EFECTOS DE APARICIÓN AL HACER SCROLL (REVEAL)
+     2. EFECTOS DE APARICIÓN AL HACER SCROLL (REVEAL)
      ========================================== */
   // Setup elements to animate
   const revealElements = [
     ".hero-title",
     ".hero-subtitle",
     ".hero-actions",
+    ".door-card",
     ".comparison-card",
     ".timeline-step",
     ".showcase-container",
@@ -321,6 +268,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
       function showSuccess() {
+        // Conversión: alta en la lista de espera (Vercel Analytics)
+        if (window.va) window.va("event", { name: "lista_espera" });
         leadForm.style.display = "none";
         if (successMsg) {
           successMsg.classList.remove("lead-success-hidden");
