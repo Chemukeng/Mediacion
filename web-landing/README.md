@@ -1,3 +1,11 @@
+# Web pública de MediAción
+
+Fuente estática publicada: esta carpeta del repositorio `Chemukeng/Mediacion`, conectada al proyecto Vercel `mediacion` (dominio `www.mediacion.app`). Los cambios se publican al subir a `main`. No subir entornos locales ni credenciales.
+
+La documentación oficial del producto permanece en [docs de app-mediacion](https://github.com/Chemukeng/app-mediacion/tree/main/docs). La oferta pública enlaza su catálogo `/precios`; no mantener otra tarifa en la web. Las guías y textos legales requieren la validación profesional registrada allí. La copia antigua del estudio no es una segunda fuente mantenida.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
