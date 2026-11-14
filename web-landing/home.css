@@ -1,0 +1,71 @@
+/* Portada editorial · ADR-040. Mantiene la identidad visual y aísla estos ajustes. */
+html.home-page { font-size: 112.5%; scroll-padding-top: 6rem; }
+.home-page .section-container { max-width: 70rem; padding-inline: 1.4rem; }
+.home-page .reading-width { max-width: 46rem; }
+.home-page .brand-logo { text-decoration: none; font-size: 1.5rem; }
+.home-page .header-container { max-width: 70rem; }
+.home-page .btn-header-cta { font-size: .85rem; }
+.home-page .hero-section { padding: 10rem 0 4rem; }
+.home-page .hero-container { max-width: 64rem; }
+.home-page .hero-badge { font-size: .7rem; text-decoration: none; letter-spacing: .12em; }
+.home-page .hero-title { font-size: clamp(2.1rem, 4.4vw, 3.8rem); max-width: 60rem; }
+.home-page .hero-lead { font-size: 1.2rem; line-height: 1.6; margin-bottom: 1rem; text-wrap: balance; }
+.home-page .hero-subtitle { font-size: 1.05rem; font-weight: 400; max-width: 42rem; margin-bottom: 2rem; }
+.home-page .hero-actions { gap: 1rem; margin-bottom: 1.5rem; }
+.home-page .btn-primary-glow, .home-page .btn-secondary { font-size: .95rem; padding: .85rem 1.4rem; justify-content: center; text-align: center; }
+.home-page .hero-trust { padding-top: 1rem; gap: .75rem 2rem; }
+.home-page .trust-item { font-size: .85rem; }
+.home-page .doors-section { padding: 4rem 0; }
+.home-page .section-header { margin-bottom: 2rem; }
+.home-page .section-tag { font-size: .7rem; letter-spacing: .15em; }
+.home-page .section-title { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1.2rem; }
+.home-page .section-subtitle { font-size: 1rem; max-width: 39rem; }
+.home-page .doors-grid { gap: 1.25rem; margin-top: 2rem; }
+.home-page .door-card { padding: 1.75rem; border: 1px solid var(--border-glass); background: var(--bg-glass); }
+.home-page .door-card:hover { transform: none; box-shadow: none; }
+.home-page h3 { font-size: 1.2rem; line-height: 1.4; }
+.home-page p { font-size: 1rem; }
+.home-page .reading-width > p + p { margin-top: 1.25rem; }
+.home-page .body-lead { font-size: 1.3rem; margin-bottom: 1rem; color: var(--bg-emerald); }
+.home-page .care-note { border-left: .2rem solid var(--gold); padding: .75rem 1rem; background: var(--gold-opacity); border-radius: 0 .7rem .7rem 0; }
+.home-page .step-number { font-size: .85rem; font-weight: 700; color: var(--gold-text); margin-bottom: 1rem; }
+.home-page .example-section { background: rgba(19,56,44,.035); }
+.home-page .example-steps { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.25rem; padding: 0; max-width: 54rem; margin: 0 auto; }
+.home-page .example-steps li { background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: 1rem; padding: 1.5rem; }
+.home-page .example-label { display: block; color: var(--gold-text); font-size: .85rem; font-weight: 600; margin-bottom: .75rem; }
+.home-page .example-conclusion { text-align: center; max-width: 38rem; margin: 2rem auto 0; }
+.home-page .text-link { color: var(--bg-emerald); font-weight: 600; text-underline-offset: .25em; }
+.home-page .home-faq details { border-bottom: 1px solid var(--gold-border); padding: 1.1rem 0; }
+.home-page .home-faq summary { cursor: pointer; font-size: 1.1rem; font-weight: 600; padding: .4rem 0; }
+.home-page .faq-answer { padding-top: .75rem; color: var(--text-muted); }
+.home-page .faq-answer p + p { margin-top: .9rem; }
+.home-page .faq-answer a { color: var(--bg-emerald); text-underline-offset: .2em; }
+.home-page .availability-card { background: var(--gold-opacity); border: 1px solid var(--gold-border); border-radius: 1.4rem; padding: 2.5rem; }
+.home-page .availability-card .btn-primary-glow { margin-top: 1.75rem; }
+.home-page .footer-tagline { font-size: .8rem; }
+.home-page .footer-copy, .home-page .footer-016 { font-size: .85rem; }
+.home-page .footer-links a { font-size: .9rem; }
+.home-page :focus-visible { outline: .18rem solid var(--bg-emerald); outline-offset: .25rem; }
+.home-page .skip-link { position: absolute; z-index: 10000; top: .5rem; left: 1rem; padding: .6rem 1rem; background: white; color: var(--bg-emerald); transform: translateY(-200%); }
+.home-page .skip-link:focus { transform: translateY(0); }
+@media (max-width: 968px) {
+  .home-page .doors-grid { grid-template-columns: 1fr; max-width: 42rem; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .home-page .hero-section { padding-top: 7.5rem; }
+  .home-page .hero-title { font-size: 2.1rem; }
+  .home-page .hero-title br { display: none; }
+  .home-page .hero-lead { font-size: 1.1rem; }
+  .home-page .hero-subtitle { font-size: 1rem; }
+  .home-page .hero-actions { flex-direction: column; width: 100%; }
+  .home-page .hero-trust { flex-direction: column; align-items: center; }
+  .home-page .doors-section { padding: 3rem 0; }
+  .home-page .example-steps { grid-template-columns: 1fr; }
+  .home-page .availability-card { width: calc(100% - 2rem); padding: 1.5rem; }
+  .home-page .btn-header-cta { font-size: .75rem; padding: .65rem .8rem; }
+  .home-page .brand-logo { font-size: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.home-page { scroll-behavior: auto; }
+  .home-page *, .home-page *::before, .home-page *::after { animation: none !important; transition: none !important; }
+}

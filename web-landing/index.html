@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <!-- Deployment trigger: clean root landing page -->
-<html lang="es">
+<html lang="es" class="home-page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediAción — Divorciaros bien | Divorcio de mutuo acuerdo online, guiado y sereno</title>
+  <title>MediAción — Separaros y construir vuestros acuerdos, paso a paso</title>
   <meta name="google-site-verification" content="lkph2I0yG1734jwpWQ0_43cuW9HnuPxblfBLb0ZQcHE" />
-  <meta name="description" content="Prepara propuestas y un borrador para revisión profesional. Consulta la descarga y la tramitación externa en el catálogo vigente. Proyecto en preparación.">
+  <meta name="description" content="Ordenad las decisiones sobre vivienda, gastos e hijos, preparad propuestas y buscad acuerdos paso a paso. Conoced MediAción: servicio en preparación.">
 
 
   <!-- Open Graph Meta Tags (WhatsApp, Facebook, etc.) -->
-  <meta property="og:title" content="MediAción — Divorciaros bien">
-  <meta property="og:description" content="Propuestas y borradores para revisión profesional. Descarga o tramitación externa; consulta el catálogo vigente.">
+  <meta property="og:title" content="MediAción — Habéis decidido separaros. Ahora toca acordar cómo.">
+  <meta property="og:description" content="Ordenad las decisiones sobre vivienda, gastos e hijos, preparad propuestas y buscad acuerdos paso a paso. Conoced MediAción: servicio en preparación.">
   <meta property="og:image" content="https://www.mediacion.app/logo_og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MediAción — Divorciaros bien">
-  <meta name="twitter:description" content="Propuestas y borradores para revisión profesional. Descarga o tramitación externa; consulta el catálogo vigente.">
+  <meta name="twitter:title" content="MediAción — Habéis decidido separaros. Ahora toca acordar cómo.">
+  <meta name="twitter:description" content="Ordenad las decisiones sobre vivienda, gastos e hijos, preparad propuestas y buscad acuerdos paso a paso. Conoced MediAción: servicio en preparación.">
   <meta name="twitter:image" content="https://www.mediacion.app/logo_og.png">
 
   <!-- Google Fonts -->
@@ -35,11 +35,12 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css?v=20261114">
   
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- Background Ambience Gradients -->
   <div class="glow-bg-top"></div>
@@ -48,41 +49,86 @@
   <!-- Header / Navigation -->
   <header class="main-header">
     <div class="header-container">
-      <div class="brand-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+      <a class="brand-logo" href="/" aria-label="MediAción, inicio">
         <span class="logo-light font-serif">Med</span>
         <span class="logo-gold font-serif">iA</span>
         <span class="logo-light font-serif">ción</span>
-      </div>
-      <a href="#" class="btn-header-cta font-serif open-modal-btn">Estado del proyecto</a>
+      </a>
+      <a href="#disponibilidad" class="btn-header-cta font-serif">Estado del proyecto</a>
     </div>
   </header>
 
-  <main>
-  <section class="hero-section">
-    <div class="section-container hero-container">
-      <div class="hero-badge font-sans"><span>MEDIACIÓN DIGITAL · PROYECTO EN PREPARACIÓN</span></div>
-      <h1 class="hero-title font-serif">Divorciaros <span class="gradient-text">bien</span>.</h1>
-      <p class="hero-subtitle">Un espacio para preparar propuestas y decidir cada punto entre ambos. Si alcanzáis un acuerdo, podéis descargar un borrador para revisión profesional o contratar su tramitación externa.</p>
-      <div class="hero-actions"><a href="https://app-mediacion-913b.vercel.app/precios" class="btn-primary-glow font-serif"><span>Ver precios y qué incluye cada opción</span></a><a href="#proceso" class="btn-secondary">Cómo funciona</a></div>
-      <div class="hero-trust"><div class="trust-item">Originales privados y versiones presentadas por ti</div><div class="trust-item">Cada propuesta requiere la decisión de ambos</div><div class="trust-item">Podéis parar sin comprar</div></div>
-    </div>
-  </section>
-  <section class="doors-section" id="proceso"><div class="section-container">
-    <div class="section-header text-center"><span class="section-tag">EL PROCESO</span><h2 class="section-title font-serif">De la preparación al borrador</h2><p class="section-subtitle">La aplicación ayuda a ordenar las propuestas. No sustituye la revisión de un profesional.</p></div>
-    <div class="doors-grid">
-      <article class="door-card"><h3 class="font-serif">1. Invitación y preparación</h3><p>Creas un enlace y lo compartes tú con la otra persona. Cada una guarda y revisa sus respuestas en su espacio privado.</p></article>
-      <article class="door-card"><h3 class="font-serif">2. Decidir qué presentar</h3><p>Revisas cada versión antes de presentarla al mediador. Terminar un cuestionario no publica sus originales automáticamente. Los permisos conjunto y del asistente son independientes.</p></article>
-      <article class="door-card"><h3 class="font-serif">3. Revisar las propuestas</h3><p>Ambos veis los puntos de la mesa y decidís si aceptarlos o pedir cambios. La IA puede equivocarse. Una propuesta no es una decisión jurídica.</p></article>
-      <article class="door-card"><h3 class="font-serif">4. Borrador y siguientes pasos</h3><p>Al acordar todos los puntos se puede generar un borrador. Su revisión, identificación, firma y formalización se realizan con los profesionales que correspondan, fuera de esta pantalla.</p></article>
-    </div>
-  </div></section>
-  <section class="doors-section" id="precios"><div class="section-container">
-    <div class="section-header text-center"><span class="section-tag">PRECIOS Y SERVICIOS</span><h2 class="section-title font-serif">Elegid qué necesitáis</h2><p class="section-subtitle">El catálogo vigente explica el total por caso, el reparto si pagáis a medias y qué incluye cada opción.</p></div>
-    <div class="doors-grid"><article class="door-card"><h3 class="font-serif">Descarga del borrador</h3><p>Lectura completa y PDF al completar su importe. No incluye revisión profesional, firma ni tramitación. Tendréis que revisarlo con un profesional antes de su uso jurídico.</p></article><article class="door-card"><h3 class="font-serif">Tramitación externa</h3><p>Incluye el borrador y la coordinación de revisión y tramitación con abogado y procurador externos. El pago abre una solicitud de coordinación; no acredita asignación, firma o presentación ya completadas.</p></article><article class="door-card"><h3 class="font-serif">Si no hay acuerdo</h3><p>Podéis parar sin comprar o seguir revisando propuestas. La aplicación no emite un certificado oficial MASC ni inicia una demanda. Un profesional de vuestra elección puede orientaros sobre cómo seguir.</p></article></div>
-    <p class="text-center" style="margin-top:2rem"><a href="https://app-mediacion-913b.vercel.app/precios" class="btn-primary-glow font-serif">Consultar el catálogo vigente y los importes</a></p>
-  </div></section>
-  <section class="doors-section"><div class="section-container"><div class="section-header text-center"><span class="section-tag">PRIVACIDAD</span><h2 class="section-title font-serif">Qué se guarda y qué se presenta</h2></div><div class="door-card"><p>Tus originales se guardan cifrados en servidor; la plataforma puede descifrarlos para prestar el servicio. No es cifrado de extremo a extremo. La entrevista usa tus respuestas y, de la otra persona, solo versiones presentadas. El mediador de la mesa utiliza versiones presentadas y las peticiones que enviéis expresamente. El asistente privado, con su propio permiso, sí procesa tus mensajes, respuestas y memoria.</p><p>La otra persona ve las propuestas de la mesa. Puedes retirar los permisos por separado; eso bloquea nuevos usos de ese canal, sin borrar automáticamente el historial ni detener una petición ya enviada al proveedor.</p></div></div></section>
-  <section class="doors-section"><div class="section-container"><div class="section-header text-center"><span class="section-tag">ESTADO DEL PROYECTO</span><h2 class="section-title font-serif">Antes de abrir el servicio</h2><p class="section-subtitle">El acceso general todavía está en preparación. La contratación, los textos jurídicos y de privacidad y la entrega profesional requieren su validación. No se anuncia una fecha ni una promoción de lanzamiento.</p></div><p class="text-center"><a href="#" class="btn-primary-glow font-serif open-modal-btn">Estado del proyecto</a></p></div></section>
+  <main id="contenido">
+    <section class="hero-section" aria-labelledby="titulo">
+      <div class="section-container hero-container">
+        <a class="hero-badge" href="#disponibilidad">PROYECTO EN PREPARACIÓN</a>
+        <h1 id="titulo" class="hero-title">Habéis decidido separaros. <br><span class="gradient-text">Ahora toca acordar cómo.</span></h1>
+        <p class="hero-lead">La casa, los gastos, el tiempo con los hijos…<br>No tenéis que tenerlo todo resuelto para empezar a buscar un acuerdo.</p>
+        <p class="hero-subtitle">MediAción os ayuda a ordenar lo que necesita cada uno, preparar propuestas y revisar lo que queda por decidir. Paso a paso, con ayuda de IA y con las decisiones en vuestras manos.</p>
+        <div class="hero-actions"><a href="#ayuda" class="btn-primary-glow">Ver cómo os puede ayudar</a><a href="#ejemplo" class="btn-secondary">Ver un ejemplo</a></div>
+        <div class="hero-trust"><span class="trust-item">Cada persona tiene su espacio</span><span class="trust-item">Ambos decidís qué aceptar</span><span class="trust-item">Podéis parar sin comprar</span></div>
+      </div>
+    </section>
+
+    <section class="doors-section" id="ayuda" aria-labelledby="ayuda-titulo"><div class="section-container">
+      <div class="section-header text-center"><span class="section-tag">UN PUNTO DE PARTIDA</span><h2 id="ayuda-titulo" class="section-title">Quizá lo difícil ahora sea esto</h2><p class="section-subtitle">Cuando hay mucho que decidir, ayuda poder tratar cada asunto por separado.</p></div>
+      <div class="doors-grid">
+        <article class="door-card"><h3>«No sabemos por dónde empezar»</h3><p>Vivienda, gastos, bienes y, si tenéis hijos, su organización. Las preguntas guiadas os ayudan a poner los temas en orden.</p></article>
+        <article class="door-card"><h3>«Nos atascamos siempre en lo mismo»</h3><p>Cada uno puede preparar lo que quiere proponer por separado. Después revisáis las propuestas, sin tener que resolverlo todo en una conversación.</p></article>
+        <article class="door-card"><h3>«Hay cosas habladas, pero quedan flecos»</h3><p>Podéis ver qué habéis aceptado los dos y qué sigue pendiente, y pedir cambios antes de dar una propuesta por acordada.</p></article>
+      </div>
+    </div></section>
+
+    <section class="doors-section" id="para-quien" aria-labelledby="para-quien-titulo"><div class="section-container reading-width">
+      <span class="section-tag">PARA QUIÉN ESTÁ PENSADA</span><h2 id="para-quien-titulo" class="section-title">No hace falta estar de acuerdo en todo.</h2>
+      <p class="body-lead">Sí estar dispuestos a buscar un acuerdo.</p><p>MediAción está pensada para parejas que quieren preparar su separación o divorcio de mutuo acuerdo. Con hijos o sin ellos. Tanto si tenéis casi todo hablado como si necesitáis concretar cuestiones importantes.</p>
+      <p>Para trabajar juntos, ambos tenéis que querer participar. Podéis empezar por aclarar qué necesita cada uno, sin tener que aceptar lo que propone la otra persona.</p>
+      <p class="care-note">Si hay miedo, violencia o presión para aceptar, este no es el espacio adecuado. Busca ayuda especializada.</p>
+    </div></section>
+
+    <section class="doors-section" id="proceso" aria-labelledby="proceso-titulo"><div class="section-container">
+      <div class="section-header text-center"><span class="section-tag">CÓMO FUNCIONA</span><h2 id="proceso-titulo" class="section-title">Del «tenemos que hablar»<br>a una propuesta concreta.</h2></div>
+      <div class="doors-grid">
+        <article class="door-card"><span class="step-number">01</span><h3>Prepara lo que necesitas</h3><p>Invitas a la otra persona mediante un enlace. Cada uno responde a preguntas en su espacio y puede apoyarse en un asistente de IA para ordenar sus ideas.</p><p>Tú revisas qué texto presentas para elaborar las propuestas. Tus respuestas originales y tu conversación privada no se muestran a tu pareja.</p></article>
+        <article class="door-card"><span class="step-number">02</span><h3>Revisad las propuestas</h3><p>Con lo que decidís presentar, la aplicación os ayuda a explorar opciones por temas. Podéis leerlas, pedir cambios y aceptar cada punto cuando estéis conformes.</p><p>La IA puede equivocarse. Ninguna propuesta pasa a ser un acuerdo hasta que ambos aceptáis la misma versión.</p></article>
+        <article class="door-card"><span class="step-number">03</span><h3>Recoged lo acordado</h3><p>Si alcanzáis un acuerdo, podéis generar un borrador que reúna lo aceptado por ambos. Si falta información, el documento indica lo que queda pendiente.</p><p>Después necesita revisión profesional y los pasos que correspondan para formalizarlo.</p></article>
+      </div>
+    </div></section>
+
+    <section class="doors-section example-section" id="ejemplo" aria-labelledby="ejemplo-titulo"><div class="section-container">
+      <div class="section-header text-center"><span class="section-tag">UN EJEMPLO FICTICIO · NO ES UN CASO REAL</span><h2 id="ejemplo-titulo" class="section-title">«Los dos queremos estar<br>con los niños en agosto».</h2><p class="section-subtitle">La idea es convertir una preocupación en algo que podáis revisar. Esta conversación ilustra el proceso; no es una recomendación para vuestra familia.</p></div>
+      <ol class="example-steps">
+        <li><span class="example-label">El punto de partida</span><p>Queréis organizar las vacaciones, pero aún no habéis concretado las fechas ni cómo hacer las entregas.</p></li>
+        <li><span class="example-label">Una primera propuesta</span><p>«Podríamos repartir agosto en dos quincenas y alternar cada año quién tiene la primera».</p></li>
+        <li><span class="example-label">Algo que necesita cambiar</span><p>«Este año trabajo hasta el día 10. Necesito que revisemos las fechas antes de aceptar».</p></li>
+        <li><span class="example-label">Una versión para volver a revisar</span><p>«Veamos las fechas disponibles de los dos y ajustemos los periodos y las entregas para este verano».</p></li>
+      </ol>
+      <p class="example-conclusion">Pedir un cambio forma parte del proceso. <strong>Solo queda acordado lo que ambos aceptáis.</strong></p>
+    </div></section>
+
+    <section class="doors-section" id="resultado" aria-labelledby="resultado-titulo"><div class="section-container reading-width">
+      <span class="section-tag">CON QUÉ OS QUEDÁIS</span><h2 id="resultado-titulo" class="section-title">Vuestras decisiones,<br>puestas en claro.</h2>
+      <p>El objetivo es que podáis distinguir lo acordado de lo pendiente y, si llegáis a un acuerdo, reunirlo en un borrador para revisión profesional. Ese documento, por sí solo, no completa el divorcio.</p>
+      <p>La descarga del borrador y la tramitación externa son opciones distintas. El catálogo explica sus importes, qué incluyen y cómo se reparte el pago. La tramitación incluye el borrador; si compráis antes la descarga, ese importe no se descuenta de una tramitación posterior.</p>
+      <p><a href="https://app-mediacion-913b.vercel.app/precios" class="text-link">Consultar precios y qué incluye cada opción</a></p>
+    </div></section>
+
+    <section class="doors-section" id="dudas" aria-labelledby="dudas-titulo"><div class="section-container reading-width">
+      <div class="section-header"><span class="section-tag">ES NORMAL TENER PREGUNTAS</span><h2 id="dudas-titulo" class="section-title">Antes de dar el siguiente paso</h2></div>
+      <div class="home-faq">
+        <details><summary>¿Nos sirve si todavía no estamos de acuerdo?</summary><div class="faq-answer"><p>Está pensada para ayudaros a trabajar esas diferencias. No necesitáis coincidir en todo, pero sí participar voluntariamente y querer explorar propuestas. La aplicación no puede obligar a nadie a aceptar ni garantiza un acuerdo.</p></div></details>
+        <details><summary>¿Y si la otra persona no quiere participar?</summary><div class="faq-answer"><p>El trabajo conjunto requiere la participación y los permisos de ambos. Puedes invitarla mediante un enlace, pero MediAción no negocia en su nombre ni convierte tus propuestas en un acuerdo unilateral.</p></div></details>
+        <details><summary>¿Qué hace la IA y qué decidimos nosotros?</summary><div class="faq-answer"><p>La IA ayuda a ordenar ideas y elaborar propuestas. Puede equivocarse: podéis revisar el contenido y pedir cambios. Vosotros decidís qué aceptar. Los aspectos jurídicos y el borrador necesitan revisión profesional.</p></div></details>
+        <details><summary>¿Mi pareja puede ver todo lo que escribo?</summary><div class="faq-answer"><p>Tus respuestas originales y tu conversación con el asistente no se muestran a la otra persona. Tú revisas qué texto presentas para elaborar las propuestas que veréis ambos.</p><p>Para ayudarte, la plataforma y el proveedor de IA procesan la información necesaria con el permiso correspondiente. Puedes leer el detalle a continuación.</p></div></details>
+        <details id="privacidad"><summary>¿Cómo se utilizan los datos y los permisos?</summary><div class="faq-answer"><p>Tus originales se guardan cifrados en servidor; la plataforma puede descifrarlos para prestar el servicio. No es cifrado de extremo a extremo.</p><p>La entrevista usa tus respuestas y, de la otra persona, solo versiones presentadas. La IA que elabora las propuestas comunes utiliza esas versiones y las peticiones que enviéis expresamente. El asistente privado, con su propio permiso, procesa tus mensajes, respuestas y memoria.</p><p>Los permisos del trabajo conjunto y del asistente son independientes. Retirarlos bloquea nuevos usos de ese canal; no borra automáticamente el historial ni detiene una petición ya enviada al proveedor.</p></div></details>
+        <details><summary>¿Qué pasa si no conseguimos un acuerdo?</summary><div class="faq-answer"><p>Podéis seguir revisando propuestas o dejar el proceso. Parar no obliga a comprar ni a contratar otro servicio. También podéis buscar orientación con un profesional de vuestra elección. La aplicación no emite un certificado oficial MASC ni inicia una demanda.</p></div></details>
+        <details><summary>¿Incluye abogado y tramitación?</summary><div class="faq-answer"><p>La descarga del borrador no incluye revisión profesional, firma ni tramitación. La opción de tramitación externa incluye el borrador y la coordinación de revisión y tramitación con abogado y procurador externos.</p><p>El pago de esa opción abre una solicitud de coordinación; no significa que ya haya un profesional asignado, un documento firmado o un trámite presentado. La prestación profesional sigue pendiente de validación antes de la apertura. Consulta el <a href="https://app-mediacion-913b.vercel.app/precios">catálogo de servicios</a>.</p></div></details>
+      </div>
+    </div></section>
+
+    <section class="doors-section" id="disponibilidad" aria-labelledby="disponibilidad-titulo"><div class="section-container reading-width availability-card">
+      <span class="section-tag">ESTADO DEL PROYECTO</span><h2 id="disponibilidad-titulo" class="section-title">Estamos preparando MediAción.</h2><p>El acceso general para casos reales todavía no está abierto. Puedes conocer aquí cómo está planteado el proceso y consultar el catálogo previsto.</p><p>Antes de abrir, debemos completar la validación de los datos del responsable, la contratación, la privacidad y la prestación profesional. Los formularios de contacto y avisos siguen en pausa.</p><a href="#ejemplo" class="btn-primary-glow">Volver al ejemplo</a>
+    </div></section>
   </main>
   <!-- Footer -->
   <footer class="main-footer">
@@ -93,7 +139,7 @@
           <span class="logo-gold font-serif">iA</span>
           <span class="logo-light font-serif">ción</span>
         </div>
-        <p class="footer-tagline">ACUERDOS INTELIGENTES</p>
+        <p class="footer-tagline">VUESTROS ACUERDOS, PASO A PASO</p>
         <p class="footer-copy">
           &copy; 2026 MediAción. Todos los derechos reservados. <br>
           Proyecto en preparación · información y prestaciones sujetas a validación antes del lanzamiento.
@@ -114,40 +160,9 @@
     </div>
   </footer>
 
-  <!-- Modal Coming Soon / Lista de Espera -->
-  <div id="coming-soon-modal" class="modal-overlay">
-    <div class="modal-card glass-card">
-      <button aria-label="Cerrar aviso de disponibilidad" id="close-modal-btn" aria-label="Cerrar estado del proyecto" class="modal-close-btn">
-        <i data-lucide="x"></i>
-      </button>
-      <div class="modal-content">
-        <div class="modal-icon-badge">
-          <i data-lucide="mail" class="icon-gold"></i>
-        </div>
-        <h3 class="modal-title font-serif">Estado del proyecto</h3>
-        <p class="modal-text">
-          Déjanos tu correo si quieres recibir un aviso de disponibilidad. No se reserva una tarifa, un profesional ni una fecha.
-        </p>
-        <p role="status">Formulario en pausa. Antes de recoger datos, debemos publicar y validar la identidad del responsable, el contacto y la información de privacidad.</p>
-        <div id="lead-success-msg" class="lead-success-hidden">
-          <i data-lucide="check-circle" class="icon-success"></i>
-          <h4>¡Gracias por tu interés!</h4>
-          <p>Hemos registrado tu correo. Te avisaremos en cuanto el registro general esté disponible.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Vercel Web Analytics (sin cookies, respetuoso con RGPD) -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
 
-  <!-- Custom JS -->
-  <script src="script.js?v=20260703"></script>
-  
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-  </script>
 </body>
 </html>

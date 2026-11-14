@@ -4,6 +4,8 @@ Fuente estática publicada: esta carpeta del repositorio `Chemukeng/Mediacion`, 
 
 La documentación oficial del producto permanece en [docs de app-mediacion](https://github.com/Chemukeng/app-mediacion/tree/main/docs). La oferta pública enlaza su catálogo `/precios`; no mantener otra tarifa en la web. Las guías y textos legales requieren la validación profesional registrada allí. La copia antigua del estudio no es una segunda fuente mantenida.
 
+La presentación humana de la portada sigue [ADR-040](https://github.com/Chemukeng/app-mediacion/blob/main/docs/adr/ADR-040-mensaje-humano-web-publica.md). Los estilos propios están en `home.css`; preguntas y enlaces funcionan con HTML nativo, sin el controlador de formularios. Vista previa estática: `python3 -m http.server 4173 --directory web-landing` desde la raíz del repositorio.
+
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
